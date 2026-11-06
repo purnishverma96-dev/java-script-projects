@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+box-sizing: border-box;
+}
+html{
+    /* 1rem = 10px */
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-family:"Saira" ;
+    margin: 0 auto;
+    background-color: rgb(37, 135, 102);
+    line-height: 1;
+}
+.body-full{
+    background-color: rgb(202, 78, 25);
+}
+header{
+    height: 35vh;
+    position: relative;
+    border-bottom: 5px solid white;
+}
+.btn{
+    border: none;
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+   font-size: 3rem;
+   font-weight: 600;
+   position:absolute;
+   top: 4rem;
+   left: 4rem;
+}
+.again{
+    transition: all 0.3s ease;
+}
+.again:hover{
+    background-color: bisque;
+    transform: scale(1.02);
+}
+.between{
+    font-size: 3rem;
+    font-weight: 500;
+    display: inline-block;
+    position: absolute;
+    right: 5rem;
+    top: 5rem;
+}
+.guess-num{
+    font-size: 4rem;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.display-box{
+    font-size: 3rem;
+    
+    padding: 1rem 6rem;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 50%;
+    border-radius: 5px;
+        transform: translate(-50% , 50%);
+
+
+}
+
+
+main{
+    height: 65vh;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.left,
+.right{
+    width: 50%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.guess{
+    background-color: black;
+    color: white;
+    width: 15rem;
+    height: 9rem;
+    padding: 1rem;
+    border-radius: 5px;
+  border: none;
+  text-align: center;
+font-size: 4rem;  
+box-sizing: border-box;
+border: 2px solid white;
+}
+.input-field-1{
+    font-size: 5rem;
+    width: 15rem;
+    height: 8rem;
+    border: 5px solid white;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-field-2{
+    padding: 2rem 3rem;
+    display: inline-block;
+    background-color: white;
+    font-size: 3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.input-field-2:hover{
+ background-color: black;
+ color: white;
+}
+.correct{
+    margin-bottom: 3rem;
+}
