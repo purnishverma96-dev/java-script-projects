@@ -1,11 +1,6 @@
  "use strict"
  // we are building a game where we have to guess number between 1 to 20
  const correct  = document.querySelector(".correct")
-//  document.querySelector(".display-box").textContent = 0;
-//  document.querySelector(".score-point").textContent = 2;
-
-
-
 // here's the logic of if use clicks on check button
 let guess;
 let secretNumber = Math.floor(Math.random()*20)+1;
@@ -15,41 +10,62 @@ let highestScore = 0;
 const body = document.querySelector("body");
 let gameOver = false;
 
+const showCorrectMessage = function(message){
+  correct.textContent = message;
+}
+
  document.querySelector(".input-field-2").addEventListener("click" , function(){
  if(gameOver) return;
    guess =Number(document.querySelector(".guess").value);
 
   // Number("") is equal to 0
-  if(!guess){ // !0 true value 
-     correct.textContent= "⛔ Enter the Number";
+  if(!guess){ // !0 is a true value 
+   //  correct.textContent= "⛔ Enter the Number";
+   showCorrectMessage( "⛔ Enter the Number");
   }else if(guess>20 || guess < 1){
-         correct.textContent= "⛔ Enter the Number Between 1 to 20";
+       //  correct.textContent= "⛔ Enter the Number Between 1 to 20";
+       showCorrectMessage( "⛔ Enter the Number Between 1 to 20");
          return;
 
-  } else if(guess>secretNumber){
-         correct.textContent= "⚡ Too High";
-         score--;
-     document.querySelector(".score-point").textContent = score;
+   } else if(guess !==secretNumber){
+      //correct.textContent = (guess>secretNumber)? "⚡ Too High" : "🌟 Too Low";
+      showCorrectMessage((guess>secretNumber)? "⚡ Too High" : "🌟 Too Low");
+      score--;
+       document.querySelector(".score-point").textContent = score;
        if(score===0){
-    correct.textContent = "🔥 You Lost The Game";
+   // correct.textContent = "🔥 You Lost The Game";
+   showCorrectMessage( "🔥 You Lost The Game");
     document.querySelector(".score-point").textContent = score;
     gameOver = true;
     return;
-  }
-  }else if(guess<secretNumber){
-    correct.textContent="🌟 Too Low"
-    score--;
-    document.querySelector(".score-point").textContent = score;
-       if(score===0){
-    correct.textContent = "🔥 You Lost The Game";
-    document.querySelector(".score-point").textContent = score;
-    gameOver = true;
+   }
+ //  else if(guess>secretNumber){
+  //        correct.textContent= "⚡ Too High";
+  //        score--;
+  //    document.querySelector(".score-point").textContent = score;
+  //      if(score===0){
+  //   correct.textContent = "🔥 You Lost The Game";
+  //   document.querySelector(".score-point").textContent = score;
+  //   gameOver = true;
+  //   return;
+  // }
+  // }else if(guess<secretNumber){
+  //   correct.textContent="🌟 Too Low"
+  //   score--;
+  //   document.querySelector(".score-point").textContent = score;
+  //      if(score===0){
+  //   correct.textContent = "🔥 You Lost The Game";
+  //   document.querySelector(".score-point").textContent = score;
+  //   gameOver = true;
   
-    return;
-     }
+  //   return;
+  //    }
 
+  // }
+  
   }else if(guess===secretNumber){
-         correct.textContent= "😀 Your guessed right";
+        // correct.textContent= "😀 Your guessed right";
+        showCorrectMessage( "😀 Your guessed right");
          gameOver = true;
          document.querySelector("body").style.backgroundColor = "green";
          document.querySelector(".display-box").textContent = guess;
@@ -126,7 +142,8 @@ console.log(`the secrete number after clicking agian button ${secretNumber}`)
  gameOver = false;
  score = 20;
  document.querySelector(".score-point").textContent = score;
- correct.textContent= "Start Guessing !!";
+ //correct.textContent= "Start Guessing !!";
+ showCorrectMessage( "Start Guessing !!");
 document.querySelector(".guess").value="";
  document.querySelector(".display-box").textContent ="?";
 document.querySelector("body").style.backgroundColor = " rgb(37, 135, 102)";
