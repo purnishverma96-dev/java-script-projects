@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(80, 173, 142);
+    height: 100vh;
+    font-family: "Oldenburg";
+}
+.models{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-around;
+    margin-top: 4rem;
+
+}
+.model{
+    padding: 2rem 5rem;
+    border-radius: 70rem;        
+     cursor: pointer;
+     border: none;
+     transition: all 0.3s ease;
+}
+.model:hover{
+    background-color: rgb(151, 25, 25);
+}
+.model p{
+    font-size: 2rem;
+    font-weight: 500;
+    transform: translateX(3px);
+}
+.message-box{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+      transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.cross-icon{
+    border: none;
+    background:none;
+    font-size: 5rem;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+}
+.heading{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.message{
+    font-size: 1.3rem;
+}
+.overlay{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 4;
+}
+.hidden{
+    display: none;
+}
