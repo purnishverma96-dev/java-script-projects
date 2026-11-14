@@ -30,6 +30,9 @@ body{
 .model:hover{
     background-color: rgb(151, 25, 25);
 }
+.model:focus-visible{
+    outline: 2px solid brown;
+}
 .model p{
     font-size: 2rem;
     font-weight: 500;
