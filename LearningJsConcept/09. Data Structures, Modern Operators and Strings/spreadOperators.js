@@ -46,10 +46,10 @@ const myrestaurant = {
         console.log(`all items ${item1}, ${item2}, ${item3} has been ordered`)
     }
 }
-// const orderFoods = [
+// const enterFood = [
 //     prompt("order only three items, item1"),
 //     prompt("item 2"), 
 //     prompt("item 3")
 // ]
-// myrestaurant.orderFood(...orderFoods);
+// myrestaurant.orderFood(...enterFood);
 console.log(...myrestaurant);
