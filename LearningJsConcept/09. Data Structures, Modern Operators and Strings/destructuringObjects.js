@@ -21,8 +21,24 @@ const aboutMe ={
             open : 12 , 
             close : 12,
         }
-    }
+    },
+    // calling a fuction 
+allDetails : function({newuser , dob , skills , workType , age}){
+    console.log(`here ${newuser} meets with mr. ${this.Name}`);
 }
+    // allDetails : function(obj){
+    //     console.log(obj);
+    // }
+}
+// passing an object as a prameter in fuction and calling it to another object (in aboutMe)
+aboutMe.allDetails({
+ newuser : "aman",
+    dob : 2005,
+    workType : "full-time",
+    skills : "full stack web devloper",
+    age : 23,
+})
+
 // old and manual way
 // const Name = aboutMe.Name;
 // const job = aboutMe.job;
@@ -64,11 +80,13 @@ console.log(menu , myLocation , user); // [ 5, 5, 3 ] bhopal Kartik
 // nested object destructing
 //exp-1
 const { job : purnishJob ,
-    openingHours : { saturday : saturdayTiming }
+    openingHours : { 
+        saturday : saturdayTiming 
+    }
 } = aboutMe;
 console.log(purnishJob , saturdayTiming) ; // full stack dev { open: 11, close: 12 }
 
-//ex-2
+//exp-2
 const {
    job : amanJob = "video editor" ,// remember here we try to defualt but job is matching form the aboutMe so it will not be change
    openingHours : {
@@ -80,3 +98,12 @@ const {
 }= aboutMe;
 console.log(amanJob) // full stack dev
 console.log(openingTiming , closingTiming); //12 12
+// exp - 3
+const {
+    openingHours : {
+          saturday : {
+          close : satClosingTime,
+        },
+    }
+} = aboutMe;
+console.log(satClosingTime); // 12

@@ -47,10 +47,10 @@ console.log(i , j ,k ,l) // ram sita shala roahan
 const [, , [a,b,c]]= names;
 console.log(a,b,c); // sita shala kavita
 
-// we can set defaul valuse 
+// we can set defaut values
 const marks = [90 , 93];
 const entryFee=[500, 600, 700]
-const [ak=99, bk=99 ,ck=99 ,dk=99,ek=99 ,fk=99 ,gk=99]= marks;// here we can set a defaul marks for each variables but taking valuse form marks array will be assigned to required varaibles
+const [ak=99, bk=99 ,ck=99 ,dk=99,ek=99 ,fk=99 ,gk=99]= marks;// here we can set a default marks for each variables but taking valuse form marks array will be assigned to required varaibles
 console.log(ak, bk ,ck ,dk ,ek ,fk ,gk);//90 93 99 99 99 99 99
 const [person1=1000 , person2=1000 ,person3=1000 , person4=1000 , person5=1000, person6 =1000,person7 =1000, person8=1000 ]=entryFee;
 console.log(person1 , person2, person3, person4, person5, person6 , person7 , person8);  // 500 600 700 1000 1000 1000 1000 1000
